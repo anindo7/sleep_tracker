@@ -18,7 +18,7 @@ class SleepTrackerViewModel(
 
     private var tonight = MutableLiveData<SleepNight?>()
 
-    private val nights = database.getAll()
+    val nights = database.getAll()
 
     // adding button states...
     val startEnabled = Transformations.map(tonight){
